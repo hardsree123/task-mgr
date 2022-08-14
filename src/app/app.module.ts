@@ -9,6 +9,8 @@ import { MaterialModule } from './shared/material.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 import { MatNativeDateModule } from '@angular/material/core';
+import { MediaQueryStatusComponent } from './shared/media-query-status.component';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 @NgModule({
   imports: [
@@ -19,8 +21,14 @@ import { MatNativeDateModule } from '@angular/material/core';
     HttpClientModule,
     MatNativeDateModule,
     ReactiveFormsModule,
+    FlexLayoutModule,
   ],
-  declarations: [AppComponent, HelloComponent, TaskListingComponent],
+  declarations: [
+    AppComponent,
+    HelloComponent,
+    TaskListingComponent,
+    MediaQueryStatusComponent,
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
