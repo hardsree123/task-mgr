@@ -1,0 +1,32 @@
+<mat-toolbar>
+  <button
+    mat-icon-button
+    class="example-icon"
+    aria-label="Example icon-button with menu icon"
+  >
+    <mat-icon>arrow_back</mat-icon>
+  </button>
+  <span>My App</span>
+  <span class="task-header"></span>
+  <mat-card class="title-card">
+    <mat-card-header>
+      <div mat-card-avatar class="title-header-image"></div>
+    </mat-card-header>
+  </mat-card>
+  <mat-menu #userMenu="matMenu">
+    <button
+      mat-icon-button
+      class="example-icon favorite-icon"
+      aria-label="Example icon-button with heart icon"
+    >
+      <mat-icon>favorite</mat-icon>
+    </button>
+    <button
+      mat-icon-button
+      class="example-icon"
+      aria-label="Example icon-button with share icon"
+    >
+      <mat-icon>share</mat-icon>
+    </button>
+  </mat-menu>
+</mat-toolbar>
