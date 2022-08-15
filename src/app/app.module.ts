@@ -12,6 +12,7 @@ import { MatNativeDateModule } from '@angular/material/core';
 import { MediaQueryStatusComponent } from './shared/media-query-status.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { TaskDetailsComponent } from './task-details/task-details.component';
+import { TaskOverviewComponent } from './task-overview/task-overview.component';
 
 @NgModule({
   imports: [
@@ -30,6 +31,7 @@ import { TaskDetailsComponent } from './task-details/task-details.component';
     TaskListingComponent,
     MediaQueryStatusComponent,
     TaskDetailsComponent,
+    TaskOverviewComponent,
   ],
   bootstrap: [AppComponent],
 })
