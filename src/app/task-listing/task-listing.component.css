@@ -1,6 +1,11 @@
 .task-header {
   flex: 1 1 auto;
 }
+
+.mat-card-header-text {
+  margin: 0px !important;
+}
+
 .task-card {
   max-width: 400px;
 }
@@ -8,8 +13,47 @@
 .mat-toolbar-single-row {
   padding: 0px !important;
 }
-.mat-card-header-text {
-  margin: 0px !important;
+
+.task-icon-r {
+  padding-left: 20%;
+}
+
+.task-day {
+  height: 90px;
+  width: 70px;
+  border-radius: 30px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  text-align: center;
+  cursor: pointer;
+}
+
+div.header {
+  color: black;
+  font-size: 30px;
+  padding: 15px 10px 5px;
+}
+
+div.container {
+  font-size: 15px;
+  color: black;
+  padding: 0px 10px 5px;
+}
+
+.selected > div.header {
+  color: white;
+}
+.selected > div.container {
+  color: white;
+}
+.selected {
+  background-color: #7c73e6;
+}
+
+.task-icon-l > button {
+  background-color: transparent;
+}
+.task-icon-r > button {
+  background-color: transparent;
 }
 .task-title {
   padding: 0.5rem;
@@ -17,4 +61,7 @@
 .task-header-image {
   background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
   background-size: cover;
+}
+.tast-header-two {
+  width: 100%;
 }

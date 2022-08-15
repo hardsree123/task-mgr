@@ -11,6 +11,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { MatNativeDateModule } from '@angular/material/core';
 import { MediaQueryStatusComponent } from './shared/media-query-status.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { TaskDetailsComponent } from './task-details/task-details.component';
 
 @NgModule({
   imports: [
@@ -28,6 +29,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     HelloComponent,
     TaskListingComponent,
     MediaQueryStatusComponent,
+    TaskDetailsComponent,
   ],
   bootstrap: [AppComponent],
 })

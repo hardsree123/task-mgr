@@ -1,12 +1,14 @@
-<div fxLayout="row">
+<div fxLayout="row" fxFlexFill fxLayoutAlign="center center">
   <mat-toolbar class="task">
-    <button
-      mat-icon-button
-      class="title-icon"
-      aria-label="Example icon-button with menu icon"
-    >
-      <mat-icon>arrow_back</mat-icon>
-    </button>
+    <div fxFlex="50">
+      <button
+        mat-icon-button
+        class="title-icon"
+        aria-label="Example icon-button with menu icon"
+      >
+        <mat-icon>arrow_back</mat-icon>
+      </button>
+    </div>
     <span class="task-header"></span>
     <mat-card class="task-card">
       <mat-card-header>
@@ -15,20 +17,54 @@
     </mat-card>
   </mat-toolbar>
 </div>
-<div fxLayout="row">
-  <button
-    mat-icon-button
-    fxFlex="30"
-    aria-label="Example icon-button with menu icon"
-  >
-    <mat-icon>arrow_back</mat-icon>
-  </button>
+<div
+  class="tast-header-two"
+  fxLayout="row"
+  fxLayoutGap="20px"
+  fxFlexFill
+  fxLayoutAlign="center center"
+>
+  <div fxFlex="30" class="task-icon-l">
+    <button mat-icon-button aria-label="Example icon-button with menu icon">
+      <mat-icon>arrow_back</mat-icon>
+      April
+    </button>
+  </div>
   <h3 fxFlex="40">{{ month }}</h3>
-  <button
-    mat-icon-button
-    fxFlex="30"
-    aria-label="Example icon-button with menu icon"
-  >
-    <mat-icon>arrow_forward</mat-icon>
-  </button>
+  <div fxFlex="30" class="task-icon-r">
+    <button mat-icon-button aria-label="Example icon-button with menu icon">
+      June
+      <mat-icon>arrow_forward</mat-icon>
+    </button>
+  </div>
+</div>
+<div
+  fxLayout="row"
+  fxLayoutGap="10px"
+  fxFlexFill
+  fxLayoutAlign="center center"
+  class="task-week"
+>
+  <div *ngFor="let dat of dateRange">
+    <div
+      class="task-day"
+      [ngClass]="{ selected: selectedDate === dat.date }"
+      (click)="daySelected(dat)"
+    >
+      <div class="header">{{ dat.date }}</div>
+      <div class="container">{{ dat.day }}</div>
+    </div>
+  </div>
+</div>
+
+<div
+  fxLayout="row"
+  fxLayoutGap="10px"
+  fxFlexFill
+  fxLayoutAlign="center center"
+  class="task-list"
+>
+  <div *ngIf="selectedDayTask.length > 0">
+    <task-details></task-details>
+  </div>
 </div>
