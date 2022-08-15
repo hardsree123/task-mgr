@@ -5,7 +5,9 @@
 .mat-card-header-text {
   margin: 0px !important;
 }
-
+.title-icon {
+  background-color: white;
+}
 .task-card {
   max-width: 400px;
 }
@@ -19,6 +21,7 @@
 }
 
 .task-day {
+  background-color: white;
   height: 90px;
   width: 70px;
   border-radius: 30px;

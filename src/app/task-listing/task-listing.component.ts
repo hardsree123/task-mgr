@@ -9,7 +9,9 @@ export class TaskListingComponent implements OnInit {
   constructor() {}
 
   month = 'April';
-  ngOnInit() {}
+  ngOnInit() {
+    this.daySelected({ date: '18' });
+  }
 
   dateRange: any = [
     {
@@ -138,12 +140,11 @@ export class TaskListingComponent implements OnInit {
   ];
 
   selectedDate: number;
-  selectedDayTask: any = [];
+  selectedDayTask: any;
   daySelected(element) {
     this.selectedDate = element.date;
 
     this.selectedDayTask = this.taskList.find((x) => x.date === element.date);
-    console.log(this.selectedDayTask);
   }
 
   week = [];

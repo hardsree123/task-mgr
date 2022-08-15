@@ -57,14 +57,6 @@
   </div>
 </div>
 
-<div
-  fxLayout="row"
-  fxLayoutGap="10px"
-  fxFlexFill
-  fxLayoutAlign="center center"
-  class="task-list"
->
-  <div *ngIf="selectedDayTask.length > 0">
-    <task-details></task-details>
-  </div>
+<div *ngIf="selectedDayTask">
+  <task-details [taskDetail]="selectedDayTask"></task-details>
 </div>
